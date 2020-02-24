@@ -6,22 +6,22 @@
 int main (void)
 {
 
-	int xj = 0;
-	int xk = 0;
-	int yj = 0;
-        int yk = 0;
-	int mx = 160;
-	int my = 48;
+	int x1 = 0;
+	int x2 = 0;
+	int y1 = 0;
+        int y2 = 0;
+	int maxX = 160;
+	int maxY = 48;
 	
 	WINDOW *ablak;
 	ablak = initscr();
 
 	for (;;)
 	{
-		xj = (xj - 1) % mx;
-		xk = (xk + 1) % mx;
-		yj = (yj - 1) % my;
-		yk = (yk + 1) % my;
+		x1 = (x1 - 1) % maxX;
+		x2 = (x2 + 1) % maxX;
+		y1 = (y1 - 1) % maxY;
+		y2 = (y2 + 1) % maxY;
 		
 		clear ();
 		mvprintw(0,0,
@@ -30,7 +30,7 @@ int main (void)
 		mvprintw (24, 0,
 		"x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x");
 
-		mvprintw (abs ( (yj + (my - yk) ) /2 ), abs ( (xj + (mx - xk) ) /2 ), "0");
+		mvprintw (abs ( (y1 + (maxY - y2) ) /2 ), abs ( (x1 + (maxX - x2) ) /2 ), "0");
 
 		refresh();
 
